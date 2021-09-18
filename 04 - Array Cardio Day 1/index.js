@@ -65,6 +65,7 @@ console.table(result);
 // const category = document.querySelector('.mw-category');
 // const links = Array.from(category.querySelectorAll('a'));
 // result = links.map(link => link.textContent).filter(streetName => streetName.includes('de'));
+// console.table(result);
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
