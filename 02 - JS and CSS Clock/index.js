@@ -1,16 +1,16 @@
-const hour_hand = document.querySelector('.hour-hand');
-const min_hand = document.querySelector('.min-hand');
-const second_hand = document.querySelector('.second-hand');
+const hourHand = document.querySelector('.hour-hand');
+const minHand = document.querySelector('.min-hand');
+const secondHand = document.querySelector('.second-hand');
 
 let setClock = () => {
 	const date = new Date();
-	const hour_rotation = (date.getHours() * 30) % 360;
-	const min_rotation = (date.getMinutes() * 6) % 360;
-	const second_rotation = (date.getSeconds() * 6) % 360;
+	const hourRotation = (date.getHours() * 30) % 360;
+	const minRotation = (date.getMinutes() * 6) % 360;
+	const secondRotation = (date.getSeconds() * 6) % 360;
 
-	hour_hand.style.transform = `rotate(${hour_rotation}deg)`
-	min_hand.style.transform = `rotate(${min_rotation}deg)`
-	second_hand.style.transform = `rotate(${second_rotation}deg)`
+	hourHand.style.transform = `rotate(${hourRotation}deg)`
+	minHand.style.transform = `rotate(${minRotation}deg)`
+	secondHand.style.transform = `rotate(${secondRotation}deg)`
 };
 
 setInterval(setClock, 1000);

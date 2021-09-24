@@ -47,8 +47,8 @@ console.table(result);
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live all together?
-function totalYearsLived(total_years, i){
-  return total_years + (i.passed - i.year);
+function totalYearsLived(totalYears, i){
+  return totalYears + (i.passed - i.year);
 }
 result = inventors.reduce(totalYearsLived, 0);
 console.log(result);
@@ -70,9 +70,9 @@ console.table(result);
 // 7. sort Exercise
 // Sort the people alphabetically by last name
 function sortByLastName(a, b){
-  const a_last = a.split(', ')[0];
-  const b_last = b.split(', ')[0];
-  return a_last<b_last?-1:1;
+  const aLast = a.split(', ')[0];
+  const bLast = b.split(', ')[0];
+  return aLast<bLast?-1:1;
 }
 result = people.sort(sortByLastName);
 console.table(result);
@@ -80,12 +80,12 @@ console.table(result);
 // 8. Reduce Exercise
 // Sum up the instances of each of these
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-function countVehicles(vehicle_counts, vehicle){
-  if(!vehicle_counts[vehicle]){
-    vehicle_counts[vehicle] = 0;
+function countVehicles(vehicleCounts, vehicle){
+  if(!vehicleCounts[vehicle]){
+    vehicleCounts[vehicle] = 0;
   }
-  vehicle_counts[vehicle]++;
-  return vehicle_counts;
+  vehicleCounts[vehicle]++;
+  return vehicleCounts;
 }
 result = data.reduce(countVehicles, {});
 console.table(result);

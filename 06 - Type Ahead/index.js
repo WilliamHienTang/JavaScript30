@@ -23,12 +23,12 @@ function highlightSubstring(string, substring) {
 }
 
 function displayMatches(){
-	const search_value = this.value;
-	const match_array = findMatches(search_value);
+	const searchValue = this.value;
+	const matchArray = findMatches(searchValue);
 
-	const html = match_array.map(place => {
-		const city = highlightSubstring(place.city, search_value);
-		const state = highlightSubstring(place.state, search_value);
+	const html = matchArray.map(place => {
+		const city = highlightSubstring(place.city, searchValue);
+		const state = highlightSubstring(place.state, searchValue);
 		return `
 	    <li>
           <span class="name">${city}, ${state}</span>
@@ -40,8 +40,8 @@ function displayMatches(){
 	suggestions.innerHTML = html;
 }
 
-const search_input = document.querySelector('.search');
+const searchInput = document.querySelector('.search');
 const suggestions = document.querySelector('.suggestions');
 
-search_input.addEventListener('change', displayMatches);
-search_input.addEventListener('keyup', displayMatches);
+searchInput.addEventListener('change', displayMatches);
+searchInput.addEventListener('keyup', displayMatches);
