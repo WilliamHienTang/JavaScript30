@@ -68,6 +68,5 @@ fetch('https://api.github.com/users/wesbos')
     console.log(data);
 });
 
-
 // table
 console.table(dogs);
